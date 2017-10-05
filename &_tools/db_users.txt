@@ -1,0 +1,8 @@
+user: pwx_app
+pass: pwx
+
+user: pwx
+pass: isgeheim
+
+user: plv
+pass: peemdba
