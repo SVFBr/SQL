@@ -7,6 +7,7 @@ DELETE FROM PLV.LINEREC;
 DELETE FROM PWX.ORDER_LINE;
 DELETE FROM PLV.AUFTSTAT;
 DELETE FROM PWX.TRANSPORT_UNIT WHERE TUT_ID BETWEEN '131' AND '136'; 
+DELETE FROM PWX.MESSAGE_LOG;
 
 ---------------------------------------------------------------------------------------------------- 
 
