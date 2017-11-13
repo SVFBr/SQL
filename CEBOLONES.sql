@@ -15,16 +15,12 @@ JOIN pwx.sku_location_map slm ON
 JOIN pwx.location l ON
 	l.l_id = slm.l_id
 WHERE
-	orq.order_code IN(
-		'92000001'
-	)
+	orq.order_code IN('92000001')
 ORDER BY
-	1	;
-	
+	1;
 
 ----------------------------------------------------------------------------------------------------- 104649
-
-SELECT
+ SELECT
 	OH.ORQ_ID,
 	OL.OL_ID,
 	OH.ORDER_CODE,
@@ -52,8 +48,7 @@ WHERE
 OH.TU_CODE = '';
 
 -----------------------------------------------------------------------------------------------------
-
-SELECT
+ SELECT
 	O.BOXNUMBER,
 	O.STATE,
 	A.STATID,
@@ -65,11 +60,11 @@ JOIN AUFTSTAT A
 		ORDERNUMBER,
 		PAGENUMBER
 	);
-WHERE O.BOXNUMBER = 200000001;
+WHERE
+O.BOXNUMBER = 200000001;
 
 -----------------------------------------------------------------------------------------------------
-
-SELECT
+ SELECT
 	*
 FROM
 	PWX.LOCATION
@@ -80,7 +75,10 @@ WHERE
 		FROM
 			PWX.LOCATION_GROUP_MEMBER_DEF
 	)
-	AND 
-	 LT_ID = 1011
-	 ORDER BY L_ID
-	;
+	AND LT_ID = 1011
+ORDER BY
+	L_ID;
+
+-----------------------------------------------------------------------------------------------------
+
+SELECT SLM.SLM_ID, SKU.SKU_CODE, L.GEOCODE, L.GEOCODE_DEVICE FROM SKU_LOCATION_MAP SLM INNER JOIN SKU ON SLM.SKU_ID = SKU.SKU_ID INNER JOIN LOCATION L ON L.L_ID = SLM.L_ID;

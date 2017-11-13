@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------- 
 
-DELETE FROM PWX.ORDER_REQUEST; 
+DELETE FROM PWX.ORDER_REQUEST;
 DELETE FROM PWX.ORDER_HEADER;
 DELETE FROM ORDERREC;
 DELETE FROM PLV.LINEREC;
