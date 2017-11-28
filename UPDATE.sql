@@ -1,4 +1,5 @@
 ----------------------------------------------------------------------------------------------------- START ORDER
+SELECT * FROM orderrec WHERE ORDERNUMBER = 9100001 ;
 
 UPDATE PLV.ORDERREC SET STATE = 100 WHERE STATE = 1;
 UPDATE PWX.ORDER_HEADER SET OH_STATUS = 5 WHERE OH_STATUS = 0;
