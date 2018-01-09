@@ -1,3 +1,24 @@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+						LIBERAR STATUS PARA START DE PEDIDO
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+--ONE ORDER
+UPDATE PWX.ORDER_HEADER SET OH_STATUS = '5' WHERE ORDER_CODE = '91000001';
+UPDATE PLV.ORDERREC SET STATE ='100' WHERE ORDERNUMBER = '9100001';
+
+--ALL
+UPDATE PWX.ORDER_HEADER SET OH_STATUS = 5 WHERE OH_STATUS = 0;
+UPDATE PLV.ORDERREC SET STATE = 100 WHERE STATE = 1;
+
+SELECT * FROM PWX.ORDER_HEADER;
+SELECT * FROM PLV.ORDERREC;
+
+SELECT * FROM PWX.GLB_DOMAIN_KEY ORDER BY KEY;
+MAKE_REF
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 --ROLLBACK PEDIDO APÓS STARTSERVER--------------------------------------------------------------
 
@@ -52,3 +73,9 @@ SELECT SEQ.NEXTVAL FROM DUAL;
 ALTER SEQUENCE SEQ INCREMENT BY 1;
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+SELECT * FROM PWX.YANBOG_USER_REG;
+
+INSERT INTO PWX.YANBOG_USER_REG (USERID, USER_NAME, PBL04, PBL05, PBL06, PBL07, PBL08, PBL09, PBL10, PBL11, PBL12, PBL13, PBL14, PBL15, PBL16, PBL17, PBL18, PBL19)
+VALUES('0003', 'Oras II', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false');

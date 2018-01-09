@@ -1,5 +1,4 @@
 ---------------------------------------------------------------------------------------------------- 
-SELECT * FROM PWX.ORDER_REQUEST ORDER BY ORDER_CODE;
 
 DELETE FROM PWX.ORDER_REQUEST;
 DELETE FROM PWX.ORDER_HEADER;
@@ -9,7 +8,10 @@ DELETE FROM PWX.ORDER_LINE;
 DELETE FROM PLV.AUFTSTAT;
 DELETE FROM PWX.TRANSPORT_UNIT WHERE TUT_ID BETWEEN '131' AND '136';
 DELETE FROM  PWX.MESSAGE_LOG;
+
 COMMIT;
+
+
 ---------------------------------------------------------------------------------------------------- 
 
 
@@ -35,4 +37,3 @@ COMMIT;
   --end loop;
 --end;
 
-SELECT * FROM PWX.YANBOG_USER_REG;
